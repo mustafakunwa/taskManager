@@ -47,6 +47,7 @@ router.post('/users/logoutAll', auth, async (req, res) => {
 router.get('/users/me', auth, async (req, res) => {
     res.status(200).send(req.user);
 })
+
 router.delete('/users/me', auth, async (req, res) => {
     try {
         await req.user.remove();
