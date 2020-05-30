@@ -79,6 +79,7 @@ router.patch('/users/me', auth, async (req, res) => {
         res.status(400).send(err);
     }
 })
+
 const upload = multer({
     limits: {
         fileSize: 1000000,
